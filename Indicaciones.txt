@@ -1,20 +1,11 @@
-# 1. Limpiar todo
-pip uninstall numpy torch pysentimiento transformers -y
+# 1. Activar el entorno virtual
+.\venv\Scripts\activate
 
-# 2. Instalar NumPy 1.x
-pip install "numpy<2.0"
+# 2. Instalar las librerías
+pip install -r requirements.txt
 
-# 3. Instalar PyTorch CPU
-pip install torch==2.0.1 --index-url https://download.pytorch.org/whl/cpu
+# 3. Configurar el token (NO lo guardes en ningún archivo)
+$env:TELEGRAM_TOKEN="PEGA_AQUI_TU_TOKEN"
 
-# 4. Instalar transformers
-pip install transformers==4.30.0
-
-# 5. Instalar telegram bot
-pip install python-telegram-bot==20.7
-
-# 6. Configurar token (REEMPLAZA con tu token real)
-$env:TELEGRAM_TOKEN="8708553089:AAEOatU2sbTNWoDme_Vsy-sizwpHiQDEvAU"
-
-# 7. Ejecutar bot
-python bot.
+# 4. Ejecutar el bot
+python bot.py
